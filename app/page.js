@@ -356,7 +356,7 @@ export default function Home() {
         </div>
 
         <form
-          action="https://formspree.io/f/YOUR_FORM_ID"
+          action="https://formspree.io/f/xpqoqayo"
           method="POST"
           className="mt-12 grid gap-4"
         >
