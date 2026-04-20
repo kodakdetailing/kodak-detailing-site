@@ -87,65 +87,33 @@ export default function Home() {
   ];
 
   const moreResults = [
-{
-src: "/gallery/black-luxury-sedan-side.jpg",
-alt: "Luxury sedan after detailing",
-},
 
-{
-src: "/gallery/black-porsche-macan-exterior.jpg",
-alt: "Black Porsche Macan exterior detail",
-},
+{ src: "/gallery/black-luxury-sedan-side.jpg" },
+{ src: "/gallery/black-porsche-macan-exterior.jpg" },
+{ src: "/gallery/black-sports-car-top.jpg" },
 
-{
-src: "/gallery/black-sports-car-top.jpg",
-alt: "Black sports car after mobile detail",
-},
+{ src: "/gallery/IMG_1409.JPEG" },
+{ src: "/gallery/IMG_1413.JPEG" },
 
-{
-src: "/gallery/tan-leather-interior.jpg",
-alt: "Cream leather interior detail",
-},
+{ src: "/gallery/IMG_1545.JPEG" },
+{ src: "/gallery/IMG_1640.JPEG" },
 
-{
-src: "/gallery/ford-f150-exterior.jpg",
-alt: "Ford F150 after detailing",
-},
+{ src: "/gallery/IMG_1770.JPEG" },
 
-{
-src: "/gallery/interior-dash-console.jpg",
-alt: "Interior dash and console detail",
-},
+{ src: "/gallery/IMG_1780.JPEG" },
+{ src: "/gallery/IMG_1781.JPEG" },
+{ src: "/gallery/IMG_1782.JPEG" },
 
-{
-src: "/gallery/red-black-bucket-seats.jpg",
-alt: "Red and black bucket seats",
-},
+{ src: "/gallery/IMG_1787.JPEG" },
+{ src: "/gallery/IMG_1789.JPEG" },
 
-{
-src: "/gallery/red-leather-camaro-interior.jpg",
-alt: "Red and black Camaro interior",
-},
+{ src: "/gallery/red-black-bucket-seats.jpg" },
+{ src: "/gallery/red-bucket-seat-detail.jpg" },
+{ src: "/gallery/red-leather-camaro-interior.jpg" },
 
-{
-src: "/gallery/red-bucket-seat-detail.jpg",
-alt: "Red leather seat close-up",
-},
+{ src: "/gallery/camaro-side-profile.jpg" },
+{ src: "/gallery/white-range-rover-rear.jpg" }
 
-{
-src: "/gallery/white-range-rover-rear.jpg",
-alt: "White Range Rover exterior detail",
-},
-
-{
-src: "/gallery/camaro-side-profile.jpg",
-alt: "Camaro side profile",
-},
-
-{
-src: "/gallery/grey-floor-mat-detail.jpg",
-alt: "Floor mat interior detail",
-},
 ];
 
   return (
