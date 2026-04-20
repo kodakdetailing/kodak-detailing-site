@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import { Playfair_Display, Inter } from "next/font/google";
 
 const playfair = Playfair_Display({
@@ -11,6 +14,8 @@ const inter = Inter({
 });
 
 export default function Home() {
+  const [showMoreResults, setShowMoreResults] = useState(false);
+
   const packages = [
     {
       name: "Maintenance Detail",
@@ -81,6 +86,57 @@ export default function Home() {
     },
   ];
 
+  const moreResults = [
+    {
+      src: "/gallery/black-luxury-sedan-side.jpg",
+      alt: "Luxury sedan after detailing",
+    },
+    {
+      src: "/gallery/black-porsche-macan-exterior.jpg",
+      alt: "Black Porsche Macan exterior detail",
+    },
+    {
+      src: "/gallery/black-sports-car-top-angle.jpg",
+      alt: "Black sports car after mobile detail",
+    },
+    {
+      src: "/gallery/cream-tan-leather-interior.jpg",
+      alt: "Cream leather interior detail",
+    },
+    {
+      src: "/gallery/ford-f150-front.jpg",
+      alt: "Ford F-150 after detailing",
+    },
+    {
+      src: "/gallery/interior-dash-center-console.jpg",
+      alt: "Interior dash and center console detail",
+    },
+    {
+      src: "/gallery/red-black-bucket-seats.jpg",
+      alt: "Red and black bucket seats detailed",
+    },
+    {
+      src: "/gallery/red-black-camaro-interior.jpg",
+      alt: "Red and black Camaro interior",
+    },
+    {
+      src: "/gallery/red-leather-seat-closeup.jpg",
+      alt: "Red leather seat close-up after detail",
+    },
+    {
+      src: "/gallery/white-range-rover-detail.jpg",
+      alt: "White Range Rover exterior detail",
+    },
+    {
+      src: "/gallery/white-truck-exterior.jpg",
+      alt: "White truck after detailing",
+    },
+    {
+      src: "/gallery/white-suv-driveway.jpg",
+      alt: "White SUV detailed in driveway",
+    },
+  ];
+
   return (
     <div className={`${inter.className} min-h-screen bg-black text-white`}>
       <section className="relative border-b border-white/10">
@@ -107,7 +163,6 @@ export default function Home() {
 
           <div className="mt-16 grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
             <div>
-             
               <h2
                 className={`${playfair.className} mt-7 max-w-3xl text-5xl font-medium leading-[1.02] tracking-[-0.04em] md:text-7xl`}
               >
@@ -119,7 +174,7 @@ export default function Home() {
 
               <p className="mt-7 max-w-2xl text-lg leading-8 text-white/68 md:text-xl">
                 High-end mobile detailing for daily drivers, luxury vehicles, and
-                weekend cars — delivered directly to your home with premium care
+                weekend cars delivered directly to your home with premium care
                 and professional results.
               </p>
 
@@ -176,7 +231,9 @@ export default function Home() {
 
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           <div className="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-7 shadow-lg shadow-black/20">
-            <h4 className={`${playfair.className} text-xl font-semibold tracking-[-0.02em]`}>
+            <h4
+              className={`${playfair.className} text-xl font-semibold tracking-[-0.02em]`}
+            >
               Convenience
             </h4>
             <p className="mt-4 leading-8 text-white/62">
@@ -186,7 +243,9 @@ export default function Home() {
           </div>
 
           <div className="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-7 shadow-lg shadow-black/20">
-            <h4 className={`${playfair.className} text-xl font-semibold tracking-[-0.02em]`}>
+            <h4
+              className={`${playfair.className} text-xl font-semibold tracking-[-0.02em]`}
+            >
               Premium Results
             </h4>
             <p className="mt-4 leading-8 text-white/62">
@@ -196,7 +255,9 @@ export default function Home() {
           </div>
 
           <div className="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-7 shadow-lg shadow-black/20">
-            <h4 className={`${playfair.className} text-xl font-semibold tracking-[-0.02em]`}>
+            <h4
+              className={`${playfair.className} text-xl font-semibold tracking-[-0.02em]`}
+            >
               Trusted Service
             </h4>
             <p className="mt-4 leading-8 text-white/62">
@@ -256,6 +317,42 @@ export default function Home() {
               />
             </div>
           </div>
+
+          <div className="mt-10 flex justify-center">
+            <button
+              type="button"
+              onClick={() => setShowMoreResults(!showMoreResults)}
+              className="rounded-full border border-white/15 px-7 py-4 font-medium text-white transition hover:bg-white/5"
+            >
+              {showMoreResults ? "Hide Results" : "More Results"}
+            </button>
+          </div>
+
+          {showMoreResults && (
+            <div className="mt-10">
+              <div className="mx-auto max-w-3xl text-center">
+                <p className="text-lg leading-8 text-white/62">
+                  More of our recent work, from luxury vehicles to daily drivers
+                  and interior details.
+                </p>
+              </div>
+
+              <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                {moreResults.map((image) => (
+                  <div
+                    key={image.src}
+                    className="overflow-hidden rounded-[1.75rem] border border-white/10 bg-zinc-900 shadow-xl shadow-black/30"
+                  >
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      className="h-[340px] w-full object-cover transition duration-300 hover:scale-[1.03]"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </section>
 
@@ -285,11 +382,15 @@ export default function Home() {
                   : "border-white/10 bg-white/[0.03] text-white shadow-black/20"
               }`}
             >
-              <h4 className={`${playfair.className} text-2xl font-semibold tracking-[-0.03em]`}>
+              <h4
+                className={`${playfair.className} text-2xl font-semibold tracking-[-0.03em]`}
+              >
                 {pkg.name}
               </h4>
               <p className="mt-3 text-3xl font-bold">{pkg.price}</p>
-              <p className="mt-4 text-[15px] leading-7 opacity-80">{pkg.description}</p>
+              <p className="mt-4 text-[15px] leading-7 opacity-80">
+                {pkg.description}
+              </p>
 
               <ul className="mt-6 space-y-3 text-sm">
                 {pkg.features.map((feature) => (
@@ -330,7 +431,9 @@ export default function Home() {
                 className="rounded-[1.75rem] bg-zinc-900 p-7 shadow-xl shadow-black/25"
               >
                 <div className="mb-5 text-yellow-400">★★★★★</div>
-                <p className="text-lg leading-8 text-white/92">“{testimonial.quote}”</p>
+                <p className="text-lg leading-8 text-white/92">
+                  “{testimonial.quote}”
+                </p>
                 <p className="mt-5 text-sm font-medium uppercase tracking-[0.18em] text-white/55">
                   {testimonial.name}
                 </p>
