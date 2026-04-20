@@ -87,55 +87,66 @@ export default function Home() {
   ];
 
   const moreResults = [
-    {
-      src: "/gallery/black-luxury-sedan-side.jpg",
-      alt: "Luxury sedan after detailing",
-    },
-    {
-      src: "/gallery/black-porsche-macan-exterior.jpg",
-      alt: "Black Porsche Macan exterior detail",
-    },
-    {
-      src: "/gallery/black-sports-car-top-angle.jpg",
-      alt: "Black sports car after mobile detail",
-    },
-    {
-      src: "/gallery/cream-tan-leather-interior.jpg",
-      alt: "Cream leather interior detail",
-    },
-    {
-      src: "/gallery/ford-f150-front.jpg",
-      alt: "Ford F-150 after detailing",
-    },
-    {
-      src: "/gallery/interior-dash-center-console.jpg",
-      alt: "Interior dash and center console detail",
-    },
-    {
-      src: "/gallery/red-black-bucket-seats.jpg",
-      alt: "Red and black bucket seats detailed",
-    },
-    {
-      src: "/gallery/red-black-camaro-interior.jpg",
-      alt: "Red and black Camaro interior",
-    },
-    {
-      src: "/gallery/red-leather-seat-closeup.jpg",
-      alt: "Red leather seat close-up after detail",
-    },
-    {
-      src: "/gallery/white-range-rover-detail.jpg",
-      alt: "White Range Rover exterior detail",
-    },
-    {
-      src: "/gallery/white-truck-exterior.jpg",
-      alt: "White truck after detailing",
-    },
-    {
-      src: "/gallery/white-suv-driveway.jpg",
-      alt: "White SUV detailed in driveway",
-    },
-  ];
+{
+src: "/gallery/black-luxury-sedan-side.jpg",
+alt: "Luxury sedan after detailing",
+},
+
+{
+src: "/gallery/black-porsche-macan-exterior.jpg",
+alt: "Black Porsche Macan exterior detail",
+},
+
+{
+src: "/gallery/black-sports-car-top.jpg",
+alt: "Black sports car after mobile detail",
+},
+
+{
+src: "/gallery/tan-leather-interior.jpg",
+alt: "Cream leather interior detail",
+},
+
+{
+src: "/gallery/ford-f150-exterior.jpg",
+alt: "Ford F150 after detailing",
+},
+
+{
+src: "/gallery/interior-dash-console.jpg",
+alt: "Interior dash and console detail",
+},
+
+{
+src: "/gallery/red-black-bucket-seats.jpg",
+alt: "Red and black bucket seats",
+},
+
+{
+src: "/gallery/red-leather-camaro-interior.jpg",
+alt: "Red and black Camaro interior",
+},
+
+{
+src: "/gallery/red-bucket-seat-detail.jpg",
+alt: "Red leather seat close-up",
+},
+
+{
+src: "/gallery/white-range-rover-rear.jpg",
+alt: "White Range Rover exterior detail",
+},
+
+{
+src: "/gallery/camaro-side-profile.jpg",
+alt: "Camaro side profile",
+},
+
+{
+src: "/gallery/grey-floor-mat-detail.jpg",
+alt: "Floor mat interior detail",
+},
+];
 
   return (
     <div className={`${inter.className} min-h-screen bg-black text-white`}>
