@@ -502,22 +502,35 @@ export default function Home() {
             className="rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-white outline-none placeholder:text-white/35"
           />
 
-          <select
-            name="package"
-            defaultValue=""
-            className="rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-white outline-none"
-          >
-            <option value="" disabled className="text-black">
-              Select Package
-            </option>
-            <option className="text-black">Maintenance Detail — $120</option>
-            <option className="text-black">Interior Detail — From $150</option>
-            <option className="text-black">Full Detail — From $300</option>
-            <option className="text-black">Exterior Detail (Clay Bar + One-Step Polish) — From $175</option>
-            <option className="text-black">Paint Correction (Two-Step) — From $275</option>
-            <option className="text-black">Carpet &amp; Upholstery Shampoo — From $100</option>
-            <option className="text-black">Odor Elimination — $100–$150</option>
-          </select>
+          <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+            <p className="mb-4 text-sm text-white/45">Select Services (choose all that apply)</p>
+            <div className="grid gap-3 sm:grid-cols-2">
+              {[
+                "Maintenance Detail — $120",
+                "Interior Detail — From $150",
+                "Full Detail — From $300",
+                "Exterior Detail (Clay Bar + Polish) — From $175",
+                "Paint Correction (Two-Step) — From $275",
+                "Carpet & Upholstery Shampoo — From $100",
+                "Odor Elimination — $100–$150",
+              ].map((service) => (
+                <label
+                  key={service}
+                  className="flex cursor-pointer items-center gap-3 group"
+                >
+                  <input
+                    type="checkbox"
+                    name="services"
+                    value={service}
+                    className="h-4 w-4 accent-white"
+                  />
+                  <span className="text-sm text-white/65 transition group-hover:text-white">
+                    {service}
+                  </span>
+                </label>
+              ))}
+            </div>
+          </div>
 
           <div className="grid gap-4 md:grid-cols-2">
             <input
