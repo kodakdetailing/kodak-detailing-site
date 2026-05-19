@@ -123,45 +123,75 @@ export default function Home() {
   ];
 
   const moreResults = [
-
-{ src: "/gallery/black-luxury-sedan-side.jpg" },
-{ src: "/gallery/black-porsche-macan-exterior.jpg" },
-{ src: "/gallery/black-sports-car-top.jpg" },
-
-{ src: "/gallery/IMG_1409.JPEG" },
-{ src: "/gallery/IMG_1413.JPEG" },
-
-{ src: "/gallery/IMG_1545.JPEG" },
-{ src: "/gallery/IMG_1640.JPEG" },
-
-{ src: "/gallery/IMG_1770.JPEG" },
-
-{ src: "/gallery/IMG_1780.JPEG" },
-{ src: "/gallery/IMG_1781.JPEG" },
-{ src: "/gallery/IMG_1782.JPEG" },
-
-{ src: "/gallery/IMG_1787.JPEG" },
-{ src: "/gallery/IMG_1789.JPEG" },
-
-{ src: "/gallery/red-black-bucket-seats.jpg" },
-{ src: "/gallery/red-bucket-seat-detail.jpg" },
-{ src: "/gallery/red-leather-camaro-interior.jpg" },
-
-{ src: "/gallery/camaro-side-profile.jpg" },
-{ src: "/gallery/white-range-rover-rear.jpg" }
-
-];
+    { src: "/gallery/black-luxury-sedan-side.jpg" },
+    { src: "/gallery/black-porsche-macan-exterior.jpg" },
+    { src: "/gallery/black-sports-car-top.jpg" },
+    { src: "/gallery/IMG_1409.JPEG" },
+    { src: "/gallery/IMG_1413.JPEG" },
+    { src: "/gallery/IMG_1545.JPEG" },
+    { src: "/gallery/IMG_1640.JPEG" },
+    { src: "/gallery/IMG_1770.JPEG" },
+    { src: "/gallery/IMG_1780.JPEG" },
+    { src: "/gallery/IMG_1781.JPEG" },
+    { src: "/gallery/IMG_1782.JPEG" },
+    { src: "/gallery/IMG_1787.JPEG" },
+    { src: "/gallery/IMG_1789.JPEG" },
+    { src: "/gallery/red-black-bucket-seats.jpg" },
+    { src: "/gallery/red-bucket-seat-detail.jpg" },
+    { src: "/gallery/red-leather-camaro-interior.jpg" },
+    { src: "/gallery/camaro-side-profile.jpg" },
+    { src: "/gallery/white-range-rover-rear.jpg" },
+  ];
 
   return (
-    <div className={`${inter.className} min-h-screen bg-black text-white`}>
-      <section className="relative border-b border-white/10">
+    <div className={`${inter.className} min-h-screen bg-[#0b0d1c] text-white`}>
+      <section className="relative border-b border-[#4fd8e8]/15">
         <div className="mx-auto max-w-7xl px-6 py-10 md:px-10">
           <div className="flex flex-col items-center text-center">
-            <img
-              src="/logo.png"
-              alt="Kodak Detailing logo"
-              className="h-20 w-auto object-contain md:h-24"
-            />
+            {/* Logo matching the Kodak Auto Detailing brand mark */}
+            <svg
+              viewBox="0 0 300 230"
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-20 w-auto md:h-24"
+              aria-label="Kodak Auto Detailing logo"
+            >
+              {/* K lettermark — vertical bar + upper arm + lower arm */}
+              <rect x="82" y="10" width="22" height="112" fill="#4fd8e8" />
+              <polygon points="104,10 162,10 104,66" fill="#4fd8e8" />
+              <polygon points="104,70 162,122 104,122" fill="#4fd8e8" />
+
+              {/* KODAK AUTO */}
+              <text
+                x="10"
+                y="158"
+                fontFamily="Arial, sans-serif"
+                fontSize="17"
+                fontWeight="700"
+                letterSpacing="8"
+                fill="#4fd8e8"
+              >
+                KODAK AUTO
+              </text>
+
+              {/* DETAILING */}
+              <text
+                x="10"
+                y="186"
+                fontFamily="Arial, sans-serif"
+                fontSize="23"
+                fontWeight="700"
+                letterSpacing="10"
+                fill="#4fd8e8"
+              >
+                DETAILING
+              </text>
+
+              {/* PREMIUM DETAILING SERVICE — small stacked text */}
+              <text x="238" y="169" fontFamily="Arial, sans-serif" fontSize="7" fontWeight="600" letterSpacing="2" fill="#4fd8e8">PREMIUM</text>
+              <text x="238" y="180" fontFamily="Arial, sans-serif" fontSize="7" fontWeight="600" letterSpacing="2" fill="#4fd8e8">DETAILING</text>
+              <text x="238" y="191" fontFamily="Arial, sans-serif" fontSize="7" fontWeight="600" letterSpacing="2" fill="#4fd8e8">SERVICE</text>
+            </svg>
+
             <p className="mt-3 text-[11px] font-medium uppercase tracking-[0.35em] text-white/50 md:text-xs">
               Proudly Serving the Western Suburbs of Chicago
             </p>
@@ -170,7 +200,7 @@ export default function Home() {
           <div className="absolute right-6 top-8 md:right-10">
             <a
               href="#booking"
-              className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-black transition hover:scale-[1.02] hover:opacity-95"
+              className="rounded-full bg-[#4fd8e8] px-6 py-3 text-sm font-semibold text-[#0b0d1c] transition hover:scale-[1.02] hover:opacity-95"
             >
               Book Now
             </a>
@@ -196,14 +226,14 @@ export default function Home() {
               <div className="mt-9 flex flex-wrap gap-4">
                 <a
                   href="#booking"
-                  className="rounded-full bg-white px-7 py-4 font-semibold text-black transition hover:scale-[1.02] hover:opacity-95"
+                  className="rounded-full bg-[#4fd8e8] px-7 py-4 font-semibold text-[#0b0d1c] transition hover:scale-[1.02] hover:opacity-95"
                 >
                   Book Your Detail
                 </a>
 
                 <a
                   href="#packages"
-                  className="rounded-full border border-white/15 px-7 py-4 font-medium text-white transition hover:bg-white/5"
+                  className="rounded-full border border-[#4fd8e8]/20 px-7 py-4 font-medium text-white transition hover:bg-[#4fd8e8]/5"
                 >
                   View Packages
                 </a>
@@ -216,7 +246,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-zinc-900 shadow-2xl shadow-black/40">
+            <div className="overflow-hidden rounded-[2rem] border border-[#4fd8e8]/15 bg-[#0f1224] shadow-2xl shadow-black/40">
               <img
                 src="/hero-car.jpg"
                 alt="Detailed luxury car"
@@ -245,7 +275,7 @@ export default function Home() {
         </div>
 
         <div className="mt-12 grid gap-6 md:grid-cols-3">
-          <div className="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-7 shadow-lg shadow-black/20">
+          <div className="rounded-[1.75rem] border border-[#4fd8e8]/15 bg-[#4fd8e8]/[0.04] p-7 shadow-lg shadow-black/20">
             <h4
               className={`${playfair.className} text-xl font-semibold tracking-[-0.02em]`}
             >
@@ -257,7 +287,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-7 shadow-lg shadow-black/20">
+          <div className="rounded-[1.75rem] border border-[#4fd8e8]/15 bg-[#4fd8e8]/[0.04] p-7 shadow-lg shadow-black/20">
             <h4
               className={`${playfair.className} text-xl font-semibold tracking-[-0.02em]`}
             >
@@ -269,7 +299,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-7 shadow-lg shadow-black/20">
+          <div className="rounded-[1.75rem] border border-[#4fd8e8]/15 bg-[#4fd8e8]/[0.04] p-7 shadow-lg shadow-black/20">
             <h4
               className={`${playfair.className} text-xl font-semibold tracking-[-0.02em]`}
             >
@@ -283,7 +313,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-y border-white/10 bg-zinc-950">
+      <section className="border-y border-[#4fd8e8]/15 bg-[#090b18]">
         <div className="mx-auto max-w-7xl px-6 py-24 md:px-10">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-[11px] font-medium uppercase tracking-[0.35em] text-white/45">
@@ -300,7 +330,7 @@ export default function Home() {
           </div>
 
           <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            <div className="overflow-hidden rounded-[1.75rem] border border-white/10 bg-zinc-900 shadow-xl shadow-black/30">
+            <div className="overflow-hidden rounded-[1.75rem] border border-[#4fd8e8]/15 bg-[#0f1224] shadow-xl shadow-black/30">
               <img
                 src="/before-after-1.jpg"
                 alt="Before and after detailing result 1"
@@ -308,7 +338,7 @@ export default function Home() {
               />
             </div>
 
-            <div className="overflow-hidden rounded-[1.75rem] border border-white/10 bg-zinc-900 shadow-xl shadow-black/30 lg:mr-2">
+            <div className="overflow-hidden rounded-[1.75rem] border border-[#4fd8e8]/15 bg-[#0f1224] shadow-xl shadow-black/30 lg:mr-2">
               <img
                 src="/before-after-2.jpg"
                 alt="Before and after detailing result 2"
@@ -316,7 +346,7 @@ export default function Home() {
               />
             </div>
 
-            <div className="overflow-hidden rounded-[1.75rem] border border-white/10 bg-zinc-900 shadow-xl shadow-black/30 lg:ml-2">
+            <div className="overflow-hidden rounded-[1.75rem] border border-[#4fd8e8]/15 bg-[#0f1224] shadow-xl shadow-black/30 lg:ml-2">
               <img
                 src="/before-after-3.jpg"
                 alt="Before and after detailing result 3"
@@ -324,7 +354,7 @@ export default function Home() {
               />
             </div>
 
-            <div className="overflow-hidden rounded-[1.75rem] border border-white/10 bg-zinc-900 shadow-xl shadow-black/30">
+            <div className="overflow-hidden rounded-[1.75rem] border border-[#4fd8e8]/15 bg-[#0f1224] shadow-xl shadow-black/30">
               <img
                 src="/before-after-4.jpg"
                 alt="Before and after detailing result 4"
@@ -337,7 +367,7 @@ export default function Home() {
             <button
               type="button"
               onClick={() => setShowMoreResults(!showMoreResults)}
-              className="rounded-full border border-white/15 px-7 py-4 font-medium text-white transition hover:bg-white/5"
+              className="rounded-full border border-[#4fd8e8]/20 px-7 py-4 font-medium text-white transition hover:bg-[#4fd8e8]/5"
             >
               {showMoreResults ? "Hide Results" : "More Results"}
             </button>
@@ -356,7 +386,7 @@ export default function Home() {
                 {moreResults.map((image) => (
                   <div
                     key={image.src}
-                    className="overflow-hidden rounded-[1.75rem] border border-white/10 bg-zinc-900 shadow-xl shadow-black/30"
+                    className="overflow-hidden rounded-[1.75rem] border border-[#4fd8e8]/15 bg-[#0f1224] shadow-xl shadow-black/30"
                   >
                     <img
                       src={image.src}
@@ -393,8 +423,8 @@ export default function Home() {
               key={pkg.name}
               className={`rounded-[1.75rem] border p-7 shadow-xl ${
                 pkg.featured
-                  ? "border-white bg-white text-black shadow-white/5"
-                  : "border-white/10 bg-white/[0.03] text-white shadow-black/20"
+                  ? "border-[#4fd8e8] bg-[#4fd8e8] text-[#0b0d1c] shadow-[#4fd8e8]/10"
+                  : "border-[#4fd8e8]/15 bg-[#4fd8e8]/[0.04] text-white shadow-black/20"
               }`}
             >
               <h4
@@ -416,7 +446,9 @@ export default function Home() {
               <a
                 href="#booking"
                 className={`mt-7 inline-block rounded-full px-5 py-3 font-medium transition hover:opacity-90 ${
-                  pkg.featured ? "bg-black text-white" : "bg-white text-black"
+                  pkg.featured
+                    ? "bg-[#0b0d1c] text-white"
+                    : "bg-[#4fd8e8] text-[#0b0d1c]"
                 }`}
               >
                 Select
@@ -426,7 +458,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-y border-white/10 bg-white/[0.03]">
+      <section className="border-y border-[#4fd8e8]/15 bg-[#4fd8e8]/[0.03]">
         <div className="mx-auto max-w-7xl px-6 py-24 md:px-10">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-[11px] font-medium uppercase tracking-[0.35em] text-white/45">
@@ -443,7 +475,7 @@ export default function Home() {
             {testimonials.map((testimonial) => (
               <div
                 key={testimonial.name}
-                className="rounded-[1.75rem] bg-zinc-900 p-7 shadow-xl shadow-black/25"
+                className="rounded-[1.75rem] bg-[#0f1224] p-7 shadow-xl shadow-black/25"
               >
                 <div className="mb-5 text-yellow-400">★★★★★</div>
                 <p className="text-lg leading-8 text-white/92">
@@ -481,28 +513,28 @@ export default function Home() {
           <input
             name="name"
             placeholder="Full Name"
-            className="rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-white outline-none placeholder:text-white/35"
+            className="rounded-2xl border border-[#4fd8e8]/15 bg-[#4fd8e8]/[0.04] p-5 text-white outline-none placeholder:text-white/35"
           />
 
           <input
             name="phone"
             placeholder="Phone Number"
-            className="rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-white outline-none placeholder:text-white/35"
+            className="rounded-2xl border border-[#4fd8e8]/15 bg-[#4fd8e8]/[0.04] p-5 text-white outline-none placeholder:text-white/35"
           />
 
           <input
             name="vehicle"
             placeholder="Vehicle (Year/Make/Model)"
-            className="rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-white outline-none placeholder:text-white/35"
+            className="rounded-2xl border border-[#4fd8e8]/15 bg-[#4fd8e8]/[0.04] p-5 text-white outline-none placeholder:text-white/35"
           />
 
           <input
             name="address"
             placeholder="Service Address"
-            className="rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-white outline-none placeholder:text-white/35"
+            className="rounded-2xl border border-[#4fd8e8]/15 bg-[#4fd8e8]/[0.04] p-5 text-white outline-none placeholder:text-white/35"
           />
 
-          <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+          <div className="rounded-2xl border border-[#4fd8e8]/15 bg-[#4fd8e8]/[0.04] p-5">
             <p className="mb-4 text-sm text-white/45">Select Services (choose all that apply)</p>
             <div className="grid gap-3 sm:grid-cols-2">
               {[
@@ -522,7 +554,7 @@ export default function Home() {
                     type="checkbox"
                     name="services"
                     value={service}
-                    className="h-4 w-4 accent-white"
+                    className="h-4 w-4 accent-[#4fd8e8]"
                   />
                   <span className="text-sm text-white/65 transition group-hover:text-white">
                     {service}
@@ -536,13 +568,13 @@ export default function Home() {
             <input
               name="date"
               placeholder="Preferred Date"
-              className="rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-white outline-none placeholder:text-white/35"
+              className="rounded-2xl border border-[#4fd8e8]/15 bg-[#4fd8e8]/[0.04] p-5 text-white outline-none placeholder:text-white/35"
             />
 
             <input
               name="time"
               placeholder="Preferred Time"
-              className="rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-white outline-none placeholder:text-white/35"
+              className="rounded-2xl border border-[#4fd8e8]/15 bg-[#4fd8e8]/[0.04] p-5 text-white outline-none placeholder:text-white/35"
             />
           </div>
 
@@ -550,12 +582,12 @@ export default function Home() {
             name="notes"
             rows="5"
             placeholder="Notes / Condition of vehicle"
-            className="rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-white outline-none placeholder:text-white/35"
+            className="rounded-2xl border border-[#4fd8e8]/15 bg-[#4fd8e8]/[0.04] p-5 text-white outline-none placeholder:text-white/35"
           />
 
           <button
             type="submit"
-            className="rounded-2xl bg-white py-5 font-semibold text-black transition hover:scale-[1.01] hover:opacity-95"
+            className="rounded-2xl bg-[#4fd8e8] py-5 font-semibold text-[#0b0d1c] transition hover:scale-[1.01] hover:opacity-95"
           >
             Request Booking
           </button>

@@ -12,8 +12,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Kodak Mobile Detailing | Premium Auto Detailing in Chicago's Southwest Suburbs",
-  description: "Professional mobile auto detailing serving Chicago's southwestern suburbs. We come to your home or office. Book online today.",
+  title: "Kodak Mobile Detailing | Premium Auto Detailing in Chicago's Western Suburbs",
+  description: "Professional mobile auto detailing serving Chicago's western suburbs. We come to your home or office. Book online today.",
 };
 
 export default function RootLayout({ children }) {
