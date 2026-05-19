@@ -149,50 +149,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6 py-10 md:px-10">
           <div className="flex flex-col items-center text-center">
             {/* Logo matching the Kodak Auto Detailing brand mark */}
-            <svg
-              viewBox="0 0 320 210"
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-24 w-auto md:h-28"
-              aria-label="Kodak Auto Detailing logo"
-            >
-              {/* K lettermark — centered: bar x=119–143, arms to x=196 */}
-              <rect x="119" y="8" width="24" height="110" fill="#4fd8e8" />
-              <polygon points="143,8 196,8 143,63" fill="#4fd8e8" />
-              <polygon points="143,69 196,118 143,118" fill="#4fd8e8" />
-
-              {/* KODAK AUTO — centered at x=160 */}
-              <text
-                textAnchor="middle"
-                x="152"
-                y="149"
-                fontFamily="Arial, sans-serif"
-                fontSize="15"
-                fontWeight="700"
-                letterSpacing="8"
-                fill="#4fd8e8"
-              >
-                KODAK AUTO
-              </text>
-
-              {/* DETAILING — centered, larger */}
-              <text
-                textAnchor="middle"
-                x="152"
-                y="175"
-                fontFamily="Arial, sans-serif"
-                fontSize="21"
-                fontWeight="700"
-                letterSpacing="11"
-                fill="#4fd8e8"
-              >
-                DETAILING
-              </text>
-
-              {/* PREMIUM DETAILING SERVICE — small stacked, right of DETAILING */}
-              <text x="258" y="161" fontFamily="Arial, sans-serif" fontSize="6.5" fontWeight="600" letterSpacing="1.5" fill="#4fd8e8">PREMIUM</text>
-              <text x="258" y="172" fontFamily="Arial, sans-serif" fontSize="6.5" fontWeight="600" letterSpacing="1.5" fill="#4fd8e8">DETAILING</text>
-              <text x="258" y="183" fontFamily="Arial, sans-serif" fontSize="6.5" fontWeight="600" letterSpacing="1.5" fill="#4fd8e8">SERVICE</text>
-            </svg>
+            <img src="/logo.png" alt="Kodak Auto Detailing logo" className="h-48 w-auto md:h-56" />
 
             <p className="mt-3 text-[11px] font-medium uppercase tracking-[0.35em] text-white/50 md:text-xs">
               Proudly Serving the Western Suburbs of Chicago
