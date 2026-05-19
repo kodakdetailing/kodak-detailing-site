@@ -150,22 +150,23 @@ export default function Home() {
           <div className="flex flex-col items-center text-center">
             {/* Logo matching the Kodak Auto Detailing brand mark */}
             <svg
-              viewBox="0 0 300 230"
+              viewBox="0 0 320 210"
               xmlns="http://www.w3.org/2000/svg"
-              className="h-20 w-auto md:h-24"
+              className="h-24 w-auto md:h-28"
               aria-label="Kodak Auto Detailing logo"
             >
-              {/* K lettermark — vertical bar + upper arm + lower arm */}
-              <rect x="82" y="10" width="22" height="112" fill="#4fd8e8" />
-              <polygon points="104,10 162,10 104,66" fill="#4fd8e8" />
-              <polygon points="104,70 162,122 104,122" fill="#4fd8e8" />
+              {/* K lettermark — centered: bar x=119–143, arms to x=196 */}
+              <rect x="119" y="8" width="24" height="110" fill="#4fd8e8" />
+              <polygon points="143,8 196,8 143,63" fill="#4fd8e8" />
+              <polygon points="143,69 196,118 143,118" fill="#4fd8e8" />
 
-              {/* KODAK AUTO */}
+              {/* KODAK AUTO — centered at x=160 */}
               <text
-                x="10"
-                y="158"
+                textAnchor="middle"
+                x="152"
+                y="149"
                 fontFamily="Arial, sans-serif"
-                fontSize="17"
+                fontSize="15"
                 fontWeight="700"
                 letterSpacing="8"
                 fill="#4fd8e8"
@@ -173,23 +174,24 @@ export default function Home() {
                 KODAK AUTO
               </text>
 
-              {/* DETAILING */}
+              {/* DETAILING — centered, larger */}
               <text
-                x="10"
-                y="186"
+                textAnchor="middle"
+                x="152"
+                y="175"
                 fontFamily="Arial, sans-serif"
-                fontSize="23"
+                fontSize="21"
                 fontWeight="700"
-                letterSpacing="10"
+                letterSpacing="11"
                 fill="#4fd8e8"
               >
                 DETAILING
               </text>
 
-              {/* PREMIUM DETAILING SERVICE — small stacked text */}
-              <text x="238" y="169" fontFamily="Arial, sans-serif" fontSize="7" fontWeight="600" letterSpacing="2" fill="#4fd8e8">PREMIUM</text>
-              <text x="238" y="180" fontFamily="Arial, sans-serif" fontSize="7" fontWeight="600" letterSpacing="2" fill="#4fd8e8">DETAILING</text>
-              <text x="238" y="191" fontFamily="Arial, sans-serif" fontSize="7" fontWeight="600" letterSpacing="2" fill="#4fd8e8">SERVICE</text>
+              {/* PREMIUM DETAILING SERVICE — small stacked, right of DETAILING */}
+              <text x="258" y="161" fontFamily="Arial, sans-serif" fontSize="6.5" fontWeight="600" letterSpacing="1.5" fill="#4fd8e8">PREMIUM</text>
+              <text x="258" y="172" fontFamily="Arial, sans-serif" fontSize="6.5" fontWeight="600" letterSpacing="1.5" fill="#4fd8e8">DETAILING</text>
+              <text x="258" y="183" fontFamily="Arial, sans-serif" fontSize="6.5" fontWeight="600" letterSpacing="1.5" fill="#4fd8e8">SERVICE</text>
             </svg>
 
             <p className="mt-3 text-[11px] font-medium uppercase tracking-[0.35em] text-white/50 md:text-xs">
