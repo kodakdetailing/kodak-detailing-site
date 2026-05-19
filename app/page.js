@@ -163,7 +163,7 @@ export default function Home() {
               className="h-20 w-auto object-contain md:h-24"
             />
             <p className="mt-3 text-[11px] font-medium uppercase tracking-[0.35em] text-white/50 md:text-xs">
-              Proudly Serving the Southwestern Suburbs of Chicago
+              Proudly Serving the Western Suburbs of Chicago
             </p>
           </div>
 
