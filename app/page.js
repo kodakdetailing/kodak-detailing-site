@@ -19,51 +19,87 @@ export default function Home() {
   const packages = [
     {
       name: "Maintenance Detail",
-      price: "$80–$120",
+      price: "$120",
       description:
-        "Perfect for keeping your vehicle consistently clean without needing a full reset.",
+        "Perfect for keeping your vehicle consistently clean. Quick, efficient, and done in about an hour.",
       features: [
-        "Exterior wash",
+        "Exterior hand wash",
         "Wheel + tire clean",
-        "Light vacuum",
+        "Light interior vacuum",
         "Interior wipe down",
       ],
     },
     {
+      name: "Interior Detail",
+      price: "From $150",
+      description:
+        "A thorough deep clean of your entire interior — seats, carpets, dashboard, doors, and every surface.",
+      features: [
+        "Full deep vacuum",
+        "All surfaces cleaned",
+        "Dashboard & door panels",
+        "Windows cleaned inside",
+      ],
+    },
+    {
       name: "Full Detail",
-      price: "$250–$350",
+      price: "From $300",
       description:
         "Our most popular service. A complete interior and exterior reset that brings your vehicle back to life.",
       features: [
-        "Deep interior clean",
-        "Stain removal included",
-        "Exterior wash",
-        "Windows + trim",
+        "Complete interior deep clean",
+        "Exterior hand wash",
+        "Wheel + tire clean",
+        "Windows & trim",
       ],
       featured: true,
     },
     {
-      name: "Interior Reset",
-      price: "$180–$250",
+      name: "Exterior Detail",
+      price: "From $175",
       description:
-        "Ideal for heavily used interiors needing deep cleaning, extraction, and odor removal.",
+        "Hand wash, clay bar treatment to remove contaminants, and a one-step polish to restore gloss.",
       features: [
-        "Deep vacuum",
-        "Full extraction",
-        "Odor removal",
-        "Stain treatment",
+        "Thorough hand wash",
+        "Clay bar treatment",
+        "One-step polish",
+        "Tire dressing & trim",
       ],
     },
     {
-      name: "Premium Detail",
-      price: "$350–$450",
+      name: "Paint Correction",
+      price: "From $275",
       description:
-        "For owners who want their vehicle looking as close to new as possible with a high-end finish.",
+        "Two-step correction to remove deeper scratches, swirl marks, and oxidation for a showroom finish.",
       features: [
-        "Full detail",
-        "Full extraction",
-        "Paint protection",
-        "Interior protection",
+        "Clay bar treatment",
+        "Compound cut pass",
+        "Finishing polish pass",
+        "Paint inspection included",
+      ],
+    },
+    {
+      name: "Carpet & Upholstery Shampoo",
+      price: "From $100",
+      description:
+        "Deep shampoo and extraction of carpets, floor mats, and fabric seats — fresh and stain-free.",
+      features: [
+        "Hot water extraction",
+        "Stain treatment",
+        "Floor mats shampooed",
+        "Fabric seats treated",
+      ],
+    },
+    {
+      name: "Odor Elimination",
+      price: "$100–$150",
+      description:
+        "Eliminate pet odors, smoke, food smells, and more. We treat the source so it doesn't come back.",
+      features: [
+        "Source identification",
+        "Deep treatment applied",
+        "Interior refreshed",
+        "Long-lasting results",
       ],
     },
   ];
@@ -351,7 +387,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="mt-14 grid gap-6 lg:grid-cols-4">
+        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {packages.map((pkg) => (
             <div
               key={pkg.name}
@@ -474,10 +510,13 @@ export default function Home() {
             <option value="" disabled className="text-black">
               Select Package
             </option>
-            <option className="text-black">Maintenance Detail</option>
-            <option className="text-black">Full Detail</option>
-            <option className="text-black">Interior Reset</option>
-            <option className="text-black">Premium Detail</option>
+            <option className="text-black">Maintenance Detail — $120</option>
+            <option className="text-black">Interior Detail — From $150</option>
+            <option className="text-black">Full Detail — From $300</option>
+            <option className="text-black">Exterior Detail (Clay Bar + One-Step Polish) — From $175</option>
+            <option className="text-black">Paint Correction (Two-Step) — From $275</option>
+            <option className="text-black">Carpet &amp; Upholstery Shampoo — From $100</option>
+            <option className="text-black">Odor Elimination — $100–$150</option>
           </select>
 
           <div className="grid gap-4 md:grid-cols-2">
