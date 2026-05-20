@@ -144,7 +144,7 @@ export default function Home() {
   ];
 
   return (
-    <div className={`${inter.className} min-h-screen bg-[#0b0d1c] text-white`}>
+    <div className={`${inter.className} min-h-screen bg-[#0C121E] text-white`}>
       <section className="relative border-b border-[#4fd8e8]/15">
         <div className="mx-auto max-w-7xl px-6 py-10 md:px-10">
           <div className="flex flex-col items-center text-center">
