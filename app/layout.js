@@ -2,27 +2,54 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+    variable: "--font-geist-sans",
+    subsets: ["latin"],
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+    variable: "--font-geist-mono",
+    subsets: ["latin"],
 });
 
 export const metadata = {
-  title: "Kodak Mobile Detailing | Premium Auto Detailing in Chicago's Western Suburbs",
-  description: "Professional mobile auto detailing serving Chicago's western suburbs. We come to your home or office. Book online today.",
+    metadataBase: new URL("https://kodakdetailing.com"),
+    title: "Mobile Auto Detailing Naperville IL | Kodak Detailing",
+    description:
+          "5-star mobile auto detailing in Naperville, Wheaton & Aurora. We come to you — full details from $300, paint correction from $275. Book online today.",
+    alternates: { canonical: "/" },
+    openGraph: {
+          title: "Mobile Auto Detailing Naperville IL | Kodak Detailing",
+          description:
+                  "5-star mobile auto detailing in Naperville & the west Chicago suburbs. We come to you — full details from $300.",
+          url: "https://kodakdetailing.com",
+          siteName: "Kodak Mobile Detailing",
+          images: [
+            {
+                      url: "/hero-car.jpg",
+                      width: 1200,
+                      height: 630,
+                      alt: "Kodak Mobile Detailing in Naperville, IL",
+            },
+                ],
+          locale: "en_US",
+          type: "website",
+    },
+    twitter: {
+          card: "summary_large_image",
+          title: "Mobile Auto Detailing Naperville IL | Kodak Detailing",
+          description:
+                  "5-star mobile auto detailing in Naperville & the west Chicago suburbs.",
+          images: ["/hero-car.jpg"],
+    },
 };
 
 export default function RootLayout({ children }) {
-  return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+    return (
+          <html
+        lang="en"
+        className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
-    </html>
+      </html>
   );
 }
