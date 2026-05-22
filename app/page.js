@@ -13,6 +13,74 @@ const inter = Inter({
   weight: ["400", "500", "600"],
 });
 
+const serviceAreas = [
+  "Naperville, IL",
+  "Wheaton, IL",
+  "Aurora, IL",
+  "Lisle, IL",
+  "Plainfield, IL",
+  "Bolingbrook, IL",
+  "Warrenville, IL",
+  "Glen Ellyn, IL",
+  "Downers Grove, IL",
+];
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "AutoDetailing",
+  name: "Kodak Mobile Detailing",
+  image: "https://kodakdetailing.com/logo.png",
+  url: "https://kodakdetailing.com",
+  telephone: "+1-630-528-7990",
+  priceRange: "$100-$300",
+  description:
+    "Premium mobile auto detailing serving Naperville, Wheaton, Aurora, Lisle, and the west Chicago suburbs. We come to your home or office.",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Naperville",
+    addressRegion: "IL",
+    postalCode: "60540",
+    addressCountry: "US",
+  },
+  areaServed: [
+    { "@type": "City", name: "Naperville" },
+    { "@type": "City", name: "Wheaton" },
+    { "@type": "City", name: "Aurora" },
+    { "@type": "City", name: "Lisle" },
+    { "@type": "City", name: "Plainfield" },
+    { "@type": "City", name: "Bolingbrook" },
+    { "@type": "City", name: "Warrenville" },
+    { "@type": "City", name: "Glen Ellyn" },
+    { "@type": "City", name: "Downers Grove" },
+  ],
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      opens: "08:00",
+      closes: "18:00",
+    },
+  ],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5.0",
+    reviewCount: "3",
+  },
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Detailing Packages",
+    itemListElement: [
+      { "@type": "Offer", name: "Maintenance Detail", price: "120", priceCurrency: "USD" },
+      { "@type": "Offer", name: "Interior Detail", price: "150", priceCurrency: "USD" },
+      { "@type": "Offer", name: "Full Detail", price: "300", priceCurrency: "USD" },
+      { "@type": "Offer", name: "Exterior Detail", price: "175", priceCurrency: "USD" },
+      { "@type": "Offer", name: "Paint Correction", price: "275", priceCurrency: "USD" },
+      { "@type": "Offer", name: "Carpet & Upholstery Shampoo", price: "100", priceCurrency: "USD" },
+      { "@type": "Offer", name: "Odor Elimination", price: "100", priceCurrency: "USD" },
+    ],
+  },
+};
+
 export default function Home() {
   const [showMoreResults, setShowMoreResults] = useState(false);
 
@@ -123,36 +191,40 @@ export default function Home() {
   ];
 
   const moreResults = [
-    { src: "/gallery/black-luxury-sedan-side.jpg" },
-    { src: "/gallery/black-porsche-macan-exterior.jpg" },
-    { src: "/gallery/black-sports-car-top.jpg" },
-    { src: "/gallery/IMG_1409.JPEG" },
-    { src: "/gallery/IMG_1413.JPEG" },
-    { src: "/gallery/IMG_1545.JPEG" },
-    { src: "/gallery/IMG_1640.JPEG" },
-    { src: "/gallery/IMG_1770.JPEG" },
-    { src: "/gallery/IMG_1780.JPEG" },
-    { src: "/gallery/IMG_1781.JPEG" },
-    { src: "/gallery/IMG_1782.JPEG" },
-    { src: "/gallery/IMG_1787.JPEG" },
-    { src: "/gallery/IMG_1789.JPEG" },
-    { src: "/gallery/red-black-bucket-seats.jpg" },
-    { src: "/gallery/red-bucket-seat-detail.jpg" },
-    { src: "/gallery/red-leather-camaro-interior.jpg" },
-    { src: "/gallery/camaro-side-profile.jpg" },
-    { src: "/gallery/white-range-rover-rear.jpg" },
+    { src: "/gallery/black-luxury-sedan-side.jpg", alt: "Black luxury sedan side profile after Kodak mobile detail in Naperville, IL" },
+    { src: "/gallery/black-porsche-macan-exterior.jpg", alt: "Black Porsche Macan exterior detailed in the west Chicago suburbs" },
+    { src: "/gallery/black-sports-car-top.jpg", alt: "Black sports car after a full Kodak detail" },
+    { src: "/gallery/IMG_1409.JPEG", alt: "Vehicle detail by Kodak Mobile Detailing in Naperville, IL" },
+    { src: "/gallery/IMG_1413.JPEG", alt: "Mobile auto detail completed in the west Chicago suburbs" },
+    { src: "/gallery/IMG_1545.JPEG", alt: "Premium auto detail in Naperville by Kodak Mobile Detailing" },
+    { src: "/gallery/IMG_1640.JPEG", alt: "Interior detail completed by Kodak Mobile Detailing" },
+    { src: "/gallery/IMG_1770.JPEG", alt: "Exterior detail in the west Chicago suburbs" },
+    { src: "/gallery/IMG_1780.JPEG", alt: "Vehicle after full Kodak mobile detail in Naperville" },
+    { src: "/gallery/IMG_1781.JPEG", alt: "Mobile detailing result by Kodak in the west Chicago suburbs" },
+    { src: "/gallery/IMG_1782.JPEG", alt: "Auto detailing result by Kodak Mobile Detailing" },
+    { src: "/gallery/IMG_1787.JPEG", alt: "Premium mobile detail in Naperville, IL" },
+    { src: "/gallery/IMG_1789.JPEG", alt: "Vehicle detailed by Kodak Mobile Detailing" },
+    { src: "/gallery/red-black-bucket-seats.jpg", alt: "Red and black bucket seats deep cleaned during a Kodak interior detail" },
+    { src: "/gallery/red-bucket-seat-detail.jpg", alt: "Red bucket seat after interior detail" },
+    { src: "/gallery/red-leather-camaro-interior.jpg", alt: "Red leather Camaro interior detailed by Kodak Mobile Detailing" },
+    { src: "/gallery/camaro-side-profile.jpg", alt: "Camaro side profile after exterior detail in Naperville" },
+    { src: "/gallery/white-range-rover-rear.jpg", alt: "White Range Rover rear after Kodak exterior detail in the west Chicago suburbs" },
   ];
 
   return (
     <div className={`${inter.className} min-h-screen bg-[#12111F] text-white`}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
       <section className="relative border-b border-[#4fd8e8]/15">
         <div className="mx-auto max-w-7xl px-6 py-10 md:px-10">
           <div className="flex flex-col items-center text-center">
             {/* Logo matching the Kodak Auto Detailing brand mark */}
-            <img src="/logo.png" alt="Kodak Auto Detailing logo" className="h-48 w-auto md:h-56" />
+            <img src="/logo.png" alt="Kodak Mobile Detailing logo" className="h-48 w-auto md:h-56" />
 
             <p className="mt-3 text-[11px] font-medium uppercase tracking-[0.35em] text-white/50 md:text-xs">
-              Proudly Serving the Western Suburbs of Chicago
+              Proudly Serving Naperville, Wheaton, Aurora & the West Chicago Suburbs
             </p>
           </div>
 
@@ -170,7 +242,7 @@ export default function Home() {
               <h2
                 className={`${playfair.className} mt-7 max-w-3xl text-5xl font-medium leading-[1.02] tracking-[-0.04em] md:text-7xl`}
               >
-                Premium Mobile Detailing
+                Mobile Auto Detailing in Naperville
                 <span className="block text-white/92">
                   Trusted by Local Car Owners
                 </span>
@@ -178,8 +250,8 @@ export default function Home() {
 
               <p className="mt-7 max-w-2xl text-lg leading-8 text-white/68 md:text-xl">
                 High-end mobile detailing for daily drivers, luxury vehicles, and
-                weekend cars delivered directly to your home with premium care
-                and professional results.
+                weekend cars delivered directly to your home in Naperville and the
+                west Chicago suburbs.
               </p>
 
               <div className="mt-9 flex flex-wrap gap-4">
@@ -188,6 +260,13 @@ export default function Home() {
                   className="rounded-full bg-[#4fd8e8] px-7 py-4 font-semibold text-[#0b0d1c] transition hover:scale-[1.02] hover:opacity-95"
                 >
                   Book Your Detail
+                </a>
+
+                <a
+                  href="tel:+16305287990"
+                  className="rounded-full border border-[#4fd8e8]/30 px-7 py-4 font-medium text-white transition hover:bg-[#4fd8e8]/10"
+                >
+                  Call (630) 528-7990
                 </a>
 
                 <a
@@ -208,7 +287,7 @@ export default function Home() {
             <div className="overflow-hidden rounded-[2rem] border border-[#4fd8e8]/15 bg-[#0f1224] shadow-2xl shadow-black/40">
               <img
                 src="/hero-car.jpg"
-                alt="Detailed luxury car"
+                alt="Mobile auto detailing on a luxury car in Naperville, IL"
                 className="h-full w-full object-cover"
               />
             </div>
@@ -228,8 +307,8 @@ export default function Home() {
           </h3>
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-white/62">
             We bring professional, high-end detailing directly to your home.
-            Trusted by local car owners for consistent service, clean finishes,
-            and results that stand out.
+            Trusted by local car owners across Naperville and the west Chicago
+            suburbs for consistent service and results that stand out.
           </p>
         </div>
 
@@ -284,7 +363,8 @@ export default function Home() {
               Real Results
             </h3>
             <p className="mt-5 text-lg leading-8 text-white/62">
-              Trusted by owners of luxury and performance vehicles.
+              Trusted by owners of luxury and performance vehicles in Naperville
+              and the west Chicago suburbs.
             </p>
           </div>
 
@@ -292,7 +372,7 @@ export default function Home() {
             <div className="overflow-hidden rounded-[1.75rem] border border-[#4fd8e8]/15 bg-[#0f1224] shadow-xl shadow-black/30">
               <img
                 src="/before-after-1.jpg"
-                alt="Before and after detailing result 1"
+                alt="Black BMW before and after full detail in Naperville, IL"
                 className="h-[340px] w-full object-cover"
               />
             </div>
@@ -300,7 +380,7 @@ export default function Home() {
             <div className="overflow-hidden rounded-[1.75rem] border border-[#4fd8e8]/15 bg-[#0f1224] shadow-xl shadow-black/30 lg:mr-2">
               <img
                 src="/before-after-2.jpg"
-                alt="Before and after detailing result 2"
+                alt="White SUV paint correction before and after in the west Chicago suburbs"
                 className="h-[340px] w-full object-cover"
               />
             </div>
@@ -308,7 +388,7 @@ export default function Home() {
             <div className="overflow-hidden rounded-[1.75rem] border border-[#4fd8e8]/15 bg-[#0f1224] shadow-xl shadow-black/30 lg:ml-2">
               <img
                 src="/before-after-3.jpg"
-                alt="Before and after detailing result 3"
+                alt="Sedan interior deep clean before and after carpet shampoo"
                 className="h-[340px] w-full object-cover"
               />
             </div>
@@ -316,7 +396,7 @@ export default function Home() {
             <div className="overflow-hidden rounded-[1.75rem] border border-[#4fd8e8]/15 bg-[#0f1224] shadow-xl shadow-black/30">
               <img
                 src="/before-after-4.jpg"
-                alt="Before and after detailing result 4"
+                alt="Performance car after ceramic-finish detail in Naperville, IL"
                 className="h-[340px] w-full object-cover"
               />
             </div>
@@ -417,6 +497,36 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="border-y border-[#4fd8e8]/15 bg-[#090b18]">
+        <div className="mx-auto max-w-7xl px-6 py-24 md:px-10">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-[11px] font-medium uppercase tracking-[0.35em] text-white/45">
+              Service Area
+            </p>
+            <h3
+              className={`${playfair.className} mt-4 text-4xl font-semibold tracking-[-0.03em] md:text-5xl`}
+            >
+              Where We Detail
+            </h3>
+            <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-white/62">
+              We bring premium mobile auto detailing directly to your driveway
+              across Naperville and the west Chicago suburbs.
+            </p>
+          </div>
+
+          <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {serviceAreas.map((city) => (
+              <div
+                key={city}
+                className="rounded-2xl border border-[#4fd8e8]/15 bg-[#4fd8e8]/[0.04] px-6 py-5 text-center text-white/85"
+              >
+                {city}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="border-y border-[#4fd8e8]/15 bg-[#4fd8e8]/[0.03]">
         <div className="mx-auto max-w-7xl px-6 py-24 md:px-10">
           <div className="mx-auto max-w-3xl text-center">
@@ -460,7 +570,12 @@ export default function Home() {
             Book Your Detail
           </h3>
           <p className="mt-5 text-lg leading-8 text-white/62">
-            Fill out the form below and we'll confirm your appointment quickly.
+            Fill out the form below and we'll confirm your appointment quickly,
+            or call{" "}
+            <a href="tel:+16305287990" className="text-[#4fd8e8] underline">
+              (630) 528-7990
+            </a>
+            .
           </p>
         </div>
 
