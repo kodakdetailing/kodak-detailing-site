@@ -13,12 +13,12 @@ const inter = Inter({
 export const metadata = {
   title: "Mobile Auto Detailing in Naperville, IL | Kodak Detailing",
   description:
-    "5-star mobile auto detailing in Naperville, IL. We come to your driveway from downtown to Route 59 — full details from $300, paint correction from $275. Book online.",
+    "5-star mobile auto detailing in Naperville, IL. We come to your driveway from downtown to Ashwood Park — full details from $300, paint correction from $275. Book online.",
   alternates: { canonical: "/naperville" },
   openGraph: {
     title: "Mobile Auto Detailing in Naperville, IL | Kodak Detailing",
     description:
-      "Premium mobile auto detailing across Naperville — downtown, Route 59 corridor, White Eagle, Tall Grass and every neighborhood between.",
+      "Premium mobile auto detailing across Naperville — downtown, Ashwood Park, White Eagle, Tall Grass and every neighborhood between.",
     url: "https://kodakdetailing.com/naperville",
     siteName: "Kodak Mobile Detailing",
     images: [
@@ -43,7 +43,7 @@ const napervilleSchema = {
   telephone: "+1-630-528-7990",
   priceRange: "$100-$300",
   description:
-    "Premium mobile auto detailing serving Naperville, IL — downtown, Route 59 corridor, North Naperville, South Naperville, White Eagle, Tall Grass, and all surrounding neighborhoods.",
+    "Premium mobile auto detailing serving Naperville, IL — downtown, Ashwood Park, North Naperville, South Naperville, White Eagle, Tall Grass, Hobson Greene, Knoch Knolls, Saybrook, and all surrounding neighborhoods.",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Naperville",
@@ -73,12 +73,12 @@ const napervilleSchema = {
 
 const neighborhoods = [
   "Downtown Naperville",
-  "Route 59 Corridor",
+  "Ashwood Park",
   "North Naperville",
   "South Naperville",
   "White Eagle",
   "Tall Grass",
-  "Cress Creek",
+  "Hobson Greene",
   "Knoch Knolls",
   "Saybrook",
 ];
@@ -119,19 +119,19 @@ const services = [
 const faqs = [
   {
     q: "Do you serve all of Naperville?",
-    a: "Yes — every neighborhood from downtown Naperville and the Riverwalk area to Route 59, White Eagle, Tall Grass, and out toward Warrenville. If you're inside Naperville city limits, we come to you.",
+    a: "Yes — every neighborhood from downtown Naperville and the Riverwalk area to Ashwood Park, White Eagle, Tall Grass, and out toward Warrenville. If you're inside Naperville city limits, we come to you.",
   },
   {
     q: "How long does a Naperville mobile detail take?",
-    a: "Maintenance details run about an hour. A full detail takes 3–4 hours. Paint correction can be 5–7 hours depending on the condition of the paint. We bring everything we need — water, power, and supplies — so all we need from you is a parking spot.",
+    a: "Maintenance details run about an hour. A full detail takes 3–4 hours. Paint correction can be 5–7 hours depending on the condition of the paint. All we need from you is a parking spot.",
   },
   {
     q: "Do I need to be home during the detail?",
     a: "Not at all. As long as we can access the vehicle and we've confirmed the details, you can go about your day in Naperville while we work.",
   },
   {
-    q: "Do you do ceramic coatings or paint correction in Naperville?",
-    a: "Yes — paint correction starts at $275. We do a clay bar treatment, compound cut, and finishing polish for a true showroom finish.",
+    q: "Do you do paint correction or waxing?",
+    a: "Paint correction starts at $275 — a clay bar treatment, compound cut, and finishing polish for a true showroom finish. Hand waxing is included with our exterior and full detail packages to seal the paint and bring out the gloss. We don't currently offer ceramic coatings.",
   },
   {
     q: "How do I book?",
@@ -148,6 +148,24 @@ const faqSchema = {
     acceptedAnswer: { "@type": "Answer", text: f.a },
   })),
 };
+
+const trustCards = [
+  {
+    title: "Same-Day Detail, Your Driveway",
+    body:
+      "We pull up to your home or office, do the work, and you keep your Saturday. No 30-minute drive, no waiting in a shop lobby, no second trip to pick up the car.",
+  },
+  {
+    title: "Trusted on the Cars You Care About",
+    body:
+      "Full details, multi-step paint correction, hand waxing — done at the level you'd expect from a high-end shop. The kind of work that gets us called back to luxury daily drivers, performance cars, and weekend builds across Naperville.",
+  },
+  {
+    title: "Real Naperville Reviews",
+    body:
+      "Every five-star review is from a real local customer. People hire us once and call us back — the difference shows up in the details.",
+  },
+];
 
 export default function NapervillePage() {
   return (
@@ -182,7 +200,7 @@ export default function NapervillePage() {
             </h1>
             <p className="mt-7 max-w-2xl text-lg leading-8 text-white/68 md:text-xl">
               We bring premium auto detailing directly to your driveway anywhere in
-              Naperville — downtown, Route 59 corridor, White Eagle, Tall Grass, and
+              Naperville — downtown, Ashwood Park, White Eagle, Tall Grass, and
               beyond. The same five-star service Naperville drivers trust, on your
               schedule.
             </p>
@@ -228,23 +246,7 @@ export default function NapervillePage() {
         </div>
 
         <div className="mt-12 grid gap-6 md:grid-cols-3">
-          {[
-            {
-              title: "We Come to You",
-              body:
-                "No driving across town, no waiting in a shop lobby. We set up at your home or office anywhere in Naperville and bring water, power, and supplies.",
-            },
-            {
-              title: "Naperville Knows Us",
-              body:
-                "From luxury daily drivers in White Eagle to weekend builds in downtown Naperville, we're the team local owners call when they want it done right.",
-            },
-            {
-              title: "Real Five-Star Reviews",
-              body:
-                "We've built our reputation across Naperville on quality, professionalism, and consistency. Every review is from a real local customer.",
-            },
-          ].map((item) => (
+          {trustCards.map((item) => (
             <div
               key={item.title}
               className="rounded-[1.75rem] border border-[#4fd8e8]/15 bg-[#4fd8e8]/[0.04] p-7 shadow-lg shadow-black/20"
